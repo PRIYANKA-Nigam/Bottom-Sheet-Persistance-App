@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_gravity="center"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"  android:layout_gravity="center"
+    android:gravity="center_horizontal">
+    <Button
+        android:id="@+id/button" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Expand" />
+
+    <Button
+        android:id="@+id/button2" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Collapse"/>
+    <TextView
+        android:id="@+id/text"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State"  android:textSize="30sp"
+        android:layout_marginTop="16dp" android:textColor="@android:color/black"/>
+</LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottom_sheet" android:layout_width="match_parent"
+        android:layout_height="350dp" android:background="@android:color/holo_blue_bright"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"  app:behavior_peekHeight="55dp">
+        <TextView
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:padding="16dp"  android:textSize="16sp"
+            android:text="This is a Bottom sheet\n\nThis sheet is displaying special features. Once the user click on the button a page will
+be drawn from the bottom of the screen.\n\n This sheet is going to persist as long as we are not dismissing it.This bottom sheet
+layout can be customized as per the user need. The page layout is attrctive with special backgroud property.\n Please comment on the style
+ if you like the page and do install this app.\n\nThank You!!!"/>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
